@@ -31,7 +31,8 @@ Kotlin Project Set-up
     - `Version` should be populated by default
 
     - Suggestion to leave default setting on following page of wizard
-        - Group modules: using qualified names
+        - Use auto-import
+        - Group modules: using explicit module groups
         - Create separate module per source set
         - Use default Gradle wrapper (recommended)
         - Gradle JVM: Use project JDK
@@ -53,37 +54,65 @@ Kotlin Project Set-up
 
 4. Write your first test
 
-    - Create a test class file in `/src/test/kotlin`
+    - Not quite perfectly test-driven, but create your first class file in `/src/main/kotlin`
+        - `New` -> `Kotlin File/Class`
 
     ```kotlin
-    import org.junit.Assert.assertEquals
-    import org.junit.jupiter.api.Test
-    
-    class ClassNameTest {
+    class Greeting {
 
-        private val classInstance = ClassName()
-
-        @Test
-        fun `Returns 'hello'`() {
-            assertEquals("Hello", classInstance.classFun())
-        }
     }
     ```
-    
-    - And run tests to see it fail
 
-    - Create the related class file in `/src/main/kotlin`
+    - Create a test
+        - Click on class name (`Greeting` in the above example)
+        - Press `alt` + `Return` or click the lightbulb icon and click `Create test`
 
-    ```kotlin
-    class ClassName {
+        ![create test](https://github.com/mattTea/Kotlin-notes/blob/master/images/create_test.png)
 
-        fun classFun(): String {
-            return "Hello"
+        - Select testing library (e.g. JUnit4)
+        - If this library is not found in module, click `Fix` and add with default values
+        - Choose destination directory as `../src/test/kotlin`
+
+        - Then write your first test...
+
+        ```kotlin
+        import org.junit.Assert.assertEquals
+        import org.junit.jupiter.api.Test
+        
+        class GreetingTest {
+
+            private val greeting = Greeting()
+
+            @Test
+            fun `Returns 'hello'`() {
+                assertEquals("Hello", greeting.greet())
+            }
         }
-    }
-    ```
+        ```
+    
+    - Run the test to see it fail
+
+    - Fill out the original class file to pass the test...
+
+        ```kotlin
+        class Greeting {
+
+            fun greet(): String {
+                return "Hello"
+            }
+        }
+        ```
 
     - Run tests and hopefully see it pass!
+
+
+5. Notes if build doesn't compile, check gradle settings, the following work for my simple projects. Check...
+
+    - `Use auto-import`
+    - `using explicit module groups`
+    - Delegate settings, both set to `IntelliJ IDEA`
+
+![gradle setting](https://github.com/mattTea/Kotlin-notes/blob/master/images/gradle_settings.png)
 
 
 ------
