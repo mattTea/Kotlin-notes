@@ -13,5 +13,5 @@ Project setup [instructions](https://github.com/mattTea/Kotlin-notes/blob/master
 
 ## Testing
 
-Test setup [instructions](https://github.com/mattTea/Kotlin-notes/blob/master/learning_kotlin.md#write-tests)
+Test setup [instructions](https://github.com/mattTea/Kotlin-notes/blob/master/kotlin_setup.md#write-tests)
 
