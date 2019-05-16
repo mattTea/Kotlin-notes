@@ -12,7 +12,7 @@ Kotlin Project Set-up
 
 ## Project set-up
 
-3. Create a [new gradle project](https://www.jetbrains.com/help/idea/gradle.html)
+3. Create a [new gradle project](https://www.jetbrains.com/help/idea/gradle.html) from within IntelliJ
     - (This creates a gradle project structure that includes `main` and `test` folders in `src`)
 
     - `File` -> `New` -> `Project...`
