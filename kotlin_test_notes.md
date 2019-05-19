@@ -24,6 +24,8 @@ dependencies {
 private val plane = mockk<Plane>()
 ```
 
+------
+
 ## Running all tests
 
 To run all tests (across all test classes in package)
@@ -39,3 +41,9 @@ To run all tests (across all test classes in package)
 5. Name the configuration `All tests`
 
 6. Set `Test kind` to `All in package`
+
+------
+
+## Links
+
+- JUnit4 [wiki pages](https://github.com/junit-team/junit4/wiki)
